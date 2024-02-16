@@ -6,18 +6,15 @@
 
 .CODE
 MAIN PROC
-    ; Set up segment registers
     MOV AX, @DATA
     MOV DS, AX
+    MOV AH, 09h       
+    MOV DX, OFFSET HelloWorld   
+    INT 21h          
 
-    ; Print "Hello, World!" to console
-    MOV AH, 09h       ; Function to print string
-    MOV DX, OFFSET HelloWorld   ; Load offset address of HelloWorld string
-    INT 21h           ; Call DOS interrupt
-
-    ; Exit program
-    MOV AH, 4CH       ; DOS function to exit program
-    INT 21h           ; Call DOS interrupt
+    
+    MOV AH, 4CH       
+    INT 21h           
 
 MAIN ENDP
 END MAIN
