@@ -4,13 +4,13 @@
 .CODE
 MAIN PROC
     MOV AH, 2 ;Display Character
-    MOV CX, 26 ;no. of character to display
-    MOV DL, 90 ; DL has ASCII code of null character
-PRINT_LOOP:
+    MOV CX, 26 ; this is for end loop while 26 characters are printed
+    MOV DL, 90 ; DL has ASCII code of 'Z' character
+PRINT_LOOP:  ; here
     INT 21H
     DEC DL
     DEC CX
-    JNZ PRINT_LOOP
+    JNZ PRINT_LOOP ; Jump if CX not equal to 0(Zero). jump here to line no. 9
     
     ;Dos exit
     MOV AH, 4CH
