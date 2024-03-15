@@ -4,8 +4,8 @@
 .CODE
 MAIN PROC
     MOV AH, 2 ;Display Character
-    MOV CX, 26 ;no. of character to display
-    MOV DL, 65 ; DL has ASCII code of null character
+    MOV CX, 26 ;this is for end loop while 26 characters are printed
+    MOV DL, 65 ; DL has ASCII code of 'A' character
 PRINT_LOOP:
     INT 21H
     INC DL
