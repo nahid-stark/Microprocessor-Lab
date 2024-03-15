@@ -1,7 +1,7 @@
 .MODEL SMALL
 .STACK 100H
 
-CODE
+.CODE
 MAIN PROC
     MOV AH, 2 ;Display Character
     MOV CX, 256 ;no. of character to display
