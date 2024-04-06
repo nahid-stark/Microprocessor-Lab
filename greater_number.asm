@@ -1,9 +1,9 @@
 .MODEL SMALL
 .STACK 100H
 .DATA
-    lineOne DB 'Enter First Number: ', '$'
-    lineTwo DB 'Enter Second Number: ', '$'
-    result DB 'Biggest one is: ', '$'
+    lineOne DB '(Input) Enter First Number: ', '$'
+    lineTwo DB '(Input) Enter Second Number: ', '$'
+    result DB '(Output) Biggest one is: ', '$'
 .CODE
 MAIN PROC 
     MOV AX, @DATA
