@@ -1,8 +1,8 @@
 .MODEL SMALL
 .STACK 100H
 .DATA
-    lineOne DB '(Input) Enter First Number: ', '$'
-    lineTwo DB '(Input) Enter Second Number: ', '$'
+    lineOne DB '(Input) Enter a character: ', '$'
+    lineTwo DB '(Input) Enter another character: ', '$'
     result DB '(Output) First one is: ', '$'
 .CODE
 MAIN PROC 
