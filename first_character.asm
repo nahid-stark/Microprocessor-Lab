@@ -1,15 +1,15 @@
 .MODEL SMALL
 .STACK 100H
 .DATA
-    lineOne DB '(Input) Enter a character: ', '$'
-    lineTwo DB '(Input) Enter another character: ', '$'
+    charOne DB '(Input) Enter a character: ', '$'
+    charTwo DB '(Input) Enter another character: ', '$'
     result DB '(Output) First one is: ', '$'
 .CODE
 MAIN PROC 
     MOV AX, @DATA
     MOV DS, AX
     MOV AH, 09h
-    MOV DX, OFFSET lineOne
+    MOV DX, OFFSET charOne
     INT 21H
     MOV AH, 01h        
     INT 21H
@@ -24,7 +24,7 @@ MAIN PROC
     MOV AX, @DATA
     MOV DS, AX
     MOV AH, 09h
-    MOV DX, OFFSET lineTwo
+    MOV DX, OFFSET charTwo
     INT 21H   
     MOV AH, 01h        
     INT 21H
